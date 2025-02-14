@@ -24,7 +24,7 @@ public class PlayerDestroy : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + points;
+            scoreText.text = "You're a cat. Break as much stuff as you can. Score: " + points;
         }
     }
   
