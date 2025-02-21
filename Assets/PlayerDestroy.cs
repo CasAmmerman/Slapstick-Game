@@ -14,7 +14,10 @@ public class PlayerDestroy : MonoBehaviour
             if (breakable != null)
             {
                 points += breakable.pointValue; // Add the object's points
-                Destroy(other.gameObject); // Destroy the object
+                Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+                rb.isKinematic = false;
+                rb.AddForce(Vector3.up*500f);
+                rb.AddTorque(50f);
                 UpdateScoreText(); // Update UI
             }
         }
